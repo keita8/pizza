@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr-FR" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{% block titre %} {% endblock titre %}</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" media="all" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" media="all" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}" media="all" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/font-pizzaro.css' %}" media="all" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="all" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/colors/red.css' %}" media="all" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}" media="all" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+      <link rel="shortcut icon" href="{% static '/images/fav-icon.png' %}">
+</head>
+<body class="page-template-template-homepage-v1 home-v1">
+   <div id="page" class="hfeed site">
+
+         {% include "includes/navbar.html" %}
+         
+         <div id="content" class="site-content" tabindex="-1" >
+            <div class="col-full">
+               <div id="primary" class="content-area">
+                  <main id="main" class="site-main" >  
+                     
+                  {% block content %}
+                        
+                  {% endblock content %}
+                  
+                  </main> 
+                  <!-- #main -->
+               </div>
+               <!-- #primary -->
+            </div>
+            <!-- .col-full -->
+         </div>
+   </div>
+         <!-- #content -->
+         
+{% include "includes/footer.html" %}
